@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mobile_core.base.mvvm.MViewModel"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Content-->
+        <FrameLayout
+            android:id="@+id/content_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--Shade View-->
+        <com.mobile_core.base.view.customer.EmptyView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ev_empty_button="@string/try_again"
+            app:ev_empty_buttonBackgroundColor="@color/colorPrimary"
+            app:ev_empty_buttonTextColor="@color/white"
+            app:ev_empty_drawable="@drawable/ic_empty_icon"
+            app:ev_empty_drawableTint="@color/colorPrimary"
+            app:ev_empty_title="@string/empty"
+            app:ev_error_backgroundColor="@color/white"
+            app:ev_error_button="@string/try_again"
+            app:ev_error_buttonTextColor="@color/white"
+            app:ev_error_drawable="@drawable/ic_error_icon"
+            app:ev_error_drawableTint="@color/white"
+            app:ev_error_text="@string/error_connection"
+            app:ev_error_textColor="@color/white"
+            app:ev_error_title="@string/error_connection_title"
+            app:ev_error_titleTextColor="@color/white"
+            app:ev_loading_type="circular"
+            app:ev_transition="auto" />
+    </FrameLayout>
+</layout>

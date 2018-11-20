@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="price">#ff0000</color>
+
+    <!--material design color-->
+    <integer-array name="day_color_tab">
+        <item>@color/red400</item>
+        <item>@color/pink400</item>
+        <item>@color/purple400</item>
+        <item>@color/blue400</item>
+        <item>@color/cyan400</item>
+        <item>@color/teal400</item>
+        <item>@color/green400</item>
+        <item>@color/lime400</item>
+        <item>@color/yellow400</item>
+        <item>@color/orange400</item>
+        <item>@color/brown400</item>
+    </integer-array>
+
+    <integer-array name="night_color_tab">
+        <item>@color/red900</item>
+        <item>@color/pink900</item>
+        <item>@color/purple900</item>
+        <item>@color/blue900</item>
+        <item>@color/cyan900</item>
+        <item>@color/teal900</item>
+        <item>@color/green900</item>
+        <item>@color/lime900</item>
+        <item>@color/yellow900</item>
+        <item>@color/orange900</item>
+        <item>@color/brown900</item>
+    </integer-array>
+</resources>

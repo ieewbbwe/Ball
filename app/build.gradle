@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        applicationId "com.wisesoft.ball"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    /*signingConfigs {
+        debug {
+            storeFile file("sign.jks")
+            storePassword "151102"
+            keyAlias "exam"
+            keyPassword "com.exam"
+        }
+        release {
+            storeFile file("sign.jks")
+            storePassword "151102"
+            keyAlias "exam"
+            keyPassword "com.exam"
+        }
+    }*/
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.support.multidex
+    implementation project(':lib_base')
+    if(!isModule.toBoolean()){
+        implementation project(':module_main')
+        implementation project(':module_pps')
+        implementation project(':module_personal')
+    }
+}

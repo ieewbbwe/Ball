@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">lib-comment</string>
+    <string name="channel_sound_name">有声推送</string>
+    <string name="channel_silence_name">无声推送</string>
+    <string name="label_loading">加载中…</string>
+    <string name="error_connection_title">没有找到内容</string>
+    <string name="error_connection">请检查您的网络连接</string>
+    <string name="error_connection_timeout_title">连接超时…</string>
+    <string name="error_connection_timeout">请检查您的网络连接</string>
+    <string name="error_unknown_title">错误</string>
+    <string name="error_unknown">出现未知异常，请重新再试…</string>
+    <string name="try_again">重试</string>
+    <string name="empty">没有相关内容</string>
+
+</resources>
